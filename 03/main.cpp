@@ -8,15 +8,21 @@ int main(){
     ofstream OUT("out.txt");
     bool prvocislo[10000];
 
+    // nastavime vsechna cisla na prvocisla
+    // prvocislo[i] je true pokud i je prvocislo
     for (int i = 0; i < 10000; i++){
         prvocislo[i] = 1;
     }
+    
+    // zaciname od prvniho prvocisla a to je 2
+    for (int i = 2; i < N; i++){
 
-    prvocislo[0] = 0;
-    for (int i = 1; i < N; i++){
+        // pokud je i prvocislo tak ho zapiseme do souboru
         if (prvocislo[i]){
-            OUT << i + 1 << " ";
-            for (int j = i; j < N; j += i + 1){
+            OUT << i << " ";
+
+            // vsechna cisla ktera jsou nasobky prave objeveneho prvocisla nastuvujeme na false
+            for (int j = i; j < N; j += i){
                 prvocislo[j] = 0;
             }
         }
