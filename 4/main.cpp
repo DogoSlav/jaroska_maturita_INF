@@ -38,5 +38,5 @@ int main(){
     lol.print(0);
     lol.serad();
     lol.print(0);
-
+    //xd
 }
