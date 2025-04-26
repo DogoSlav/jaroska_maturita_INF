@@ -53,9 +53,10 @@ struct linkedList{
     }
 
     void print(){
-        while (koren) {
-            cout << koren->slovo << " " << koren->pocet << endl;
-            koren = koren->next;
+        Node* ptr = koren;
+        while (ptr) {
+            cout << ptr->slovo << " " << ptr->pocet << endl;
+            koren = ptr->next;
         }
     }
 
