@@ -6,11 +6,13 @@ struct T{
     int *pole;
     int size;
 
+    // konstruktor
     T(int *arr, int velikost){
         pole = arr;
         size = velikost;
     }
 
+    // nahodna cisla pomoci rekurze v celem poli
     void nahodne_cisla(int i){
         if (i == size) return;
         pole[i] = rand() % 10;
