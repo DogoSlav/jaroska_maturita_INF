@@ -4,7 +4,7 @@
 using namespace std;
 
 double rovnice(double x){
-    return pow(x, 5) - 3 * pow(x, 3) - 23 * pow(x, 3) + 51 * x * x + 94 * x - 120;
+    return pow(x, 5) - 3 * pow(x, 4) - 23 * pow(x, 3) + 51 * x * x + 94 * x - 120;
 }
 
 double derivace(double x){
